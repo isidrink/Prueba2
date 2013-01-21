@@ -1,4 +1,5 @@
-
+var serviceURL = "http://www.adapptalo.com/test/services/";
+//var serviceURL = "http://localhost/test/services/";
 // JavaScript Document
  
 // Wait for PhoneGap to load
@@ -15,7 +16,7 @@ function showAjaxView() {
 function getAjax(){
     $.ajax({
             type:"GET",
-            url: "https://api.stackexchange.com/2.1/info?site=stackoverflow"
+            url: serviceURL + 'getbeers.php'
         }).done(function( data ) {
                updateStackStatListView(data);
             });
