@@ -59,7 +59,7 @@ function getAjax(){
 }
  
 function updateStackStatListView( data ) {
-//alert (data);
+alert(JSON.stringify(data));
     $("#stackStats").kendoMobileListView({
         dataSource: kendo.data.DataSource.create({data: data.items}),
         template: $("#stackStatsTemplate").html()
