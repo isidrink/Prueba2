@@ -1,5 +1,5 @@
-//var serviceURL = "http://www.adapptalo.com/test/services/";
-var serviceURL = "http://localhost/test/services/";
+var serviceURL = "http://www.adapptalo.com/test/services/";
+//var serviceURL = "http://localhost/test/services/";
 // JavaScript Document
  
 // Wait for PhoneGap to load
