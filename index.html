@@ -52,14 +52,18 @@ function showAjaxView() {
 function getAjax(){
     $.ajax({
             type:"GET",
-            url: "http://www.adapptalo.com/test/services/getbeers.php"
+            //url: "https://api.stackexchange.com/2.1/info?site=stackoverflow"
+            url: "http://www.adapptalo.com/test/services/"
+            //url: "http://localhost/test/services/getbeers.php"
         }).done(function( data ) {
-               updateStackStatListView(data);
+              
+                    updateStackStatListView(data);
+               
             });
 }
  
 function updateStackStatListView( data ) {
-alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
     $("#stackStats").kendoMobileListView({
         dataSource: kendo.data.DataSource.create({data: data.items}),
         template: $("#stackStatsTemplate").html()
@@ -71,9 +75,9 @@ alert(JSON.stringify(data));
    <body>
           
         <script type="text/x-kendo-template" id="stackStatsTemplate" >
-            <div>gdffdfd</div>
-            <div>fddfdffd</div>
-            <div>fjnkshnfkjshn</div>
+            <div>Answers per minute #= CERVESERA#</div>
+            <div>Questions per minute #= CERVESA#</div>
+            <div>Total number of votes is #= PROCEDENCIA#</div>
         </script>
          
         <div data-role="view" id="tabstrip-home" data-title="Hello World!">
